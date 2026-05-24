@@ -1,63 +1,184 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV — Your Name</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <main class="cv">
-      <header class="cv__header">
-        <h1>Your Name</h1>
-        <p class="cv__tagline">
-          One-line summary. Who you are, what you do, what you want next.
-        </p>
-        <ul class="cv__contacts">
-          <li><a href="mailto:you@example.com">you@example.com</a></li>
-          <li><a href="https://github.com/yourname">github.com/yourname</a></li>
-        </ul>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Ваше Имя</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
 
-        <!-- TODO: твой нестандартный элемент.
-             Пример: переключатель темы, anim, easter egg. -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          🌗
-        </button>
-      </header>
+  <!-- НЕСТАНДАРТНЫЙ ЭЛЕМЕНТ: переключатель тем -->
+  <div class="theme-bar">
+    <span class="theme-label">Тема →</span>
+    <button class="theme-btn active" onclick="setTheme('dark', this)">🌑 Dark</button>
+    <button class="theme-btn" onclick="setTheme('light', this)">☀️ Light</button>
+    <button class="theme-btn" onclick="setTheme('neon', this)">🟢 Neon</button>
+    <button class="theme-btn" onclick="setTheme('retro', this)">🔥 Retro</button>
+  </div>
 
-      <section>
-        <h2>About</h2>
-        <p>
-          Two or three sentences. What you care about, what you've shipped,
-          where you're heading.
-        </p>
-      </section>
+  <div class="container">
 
-      <section>
-        <h2>Experience / Projects</h2>
-        <article>
-          <h3>Project / Role Title</h3>
-          <p class="cv__meta">Company / Context · 2024 — now</p>
-          <p>What you did. Why it mattered. What shipped.</p>
-        </article>
-        <article>
-          <h3>Another One</h3>
-          <p class="cv__meta">Context · 2023</p>
-          <p>Same shape. Keep it tight.</p>
-        </article>
-      </section>
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <div class="name-tag fade-up">Студент политеха</div>
+        <h1 class="name fade-up">Иван Чеснаков</h1>
+        <p class="title fade-up">Отвезите меня на Роллан-Гаррос</p>
+        <div class="contacts fade-up">
+          <a class="contact-chip" href="mailto:chesnakovivan019@gmail.com">
+            <span class="dot"></span> gmail
+          </a>
+          <a class="contact-chip" href="https://t.me/si_ai_ai_ai">
+            <span class="dot"></span> telegram
+          </a>
+          <a class="contact-chip" href="https://github.com/ivanchesnakov">
+            <span class="dot"></span> github.com
+          </a>
+          <a class="contact-chip" href="#">
+            <span class="dot"></span> Санкт-Петербург
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual fade-up">
+        <div class="avatar-ring">ИЧ</div>
+      </div>
+    </div>
 
-      <section>
-        <h2>Skills</h2>
-        <ul class="cv__skills">
-          <li>JavaScript</li>
-          <li>Git</li>
-          <li>CI/CD</li>
-          <li>Other thing you actually know</li>
-        </ul>
-      </section>
-    </main>
+    <!-- SUMMARY -->
+    <div class="section fade-up">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <span class="section-title">О себе</span>
+        <div class="section-line"></div>
+      </div>
+      <p class="summary-text">
+        Мне 18, учусь на matobese. Люблю решать математические задачи, и главное - абсолютный чемпион турнира по настольному теннису в </strong> БЕЛАРУСИ </strong> 2019.
+      </p>
+    </div>
 
-    <script type="module" src="./src/main.js"></script>
-  </body>
+    <!-- EXPERIENCE -->
+    <div class="section fade-up">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <span class="section-title">Опыт и проекты</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="experience-grid">
+
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">Мой сайт</span>
+            <span class="exp-period">2024 — наст. время</span>
+          </div>
+          <div class="exp-company">Проект по развитию финансовой грамотности в РФ</div>
+          <p class="exp-desc">
+            Лучший сайт в МИРЕ. Там рассчитываю кредиты, вклады, всё всё. Жалко домен кончился на wordpresse не могу ссылку кинуть.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">1 место в школе</span>
+            <span class="tag">умею брать кредиты</span>
+            <span class="tag">делал его БЕЗ нейронок</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">Beetroute</span>
+            <span class="exp-period">2025</span>
+          </div>
+          <div class="exp-company">Работа моей сестры (она у меня тоже успешная)</div>
+          <p class="exp-desc">
+            Компания рекламирует интересные места в СБП. Я тестировал их приложение, можно сказать учавствовал в создании бренда.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">оно не работало</span>
+            <span class="tag">работал 2 дня</span>
+            <span class="tag">сестру чуть не уволили </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section fade-up">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <span class="section-title">Скиллы</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-wrapper">
+        <div class="skill-group">
+          <div class="skill-group-name">С/С++</div>
+          <div class="skill-list">
+            <span class="skill-item">Сделал курсовую</span>
+            <span class="skill-item">Сдал 2 лабы</span>
+            <span class="skill-item">Знаю что такое классы</span>
+            <span class="skill-item">учусь</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Python</div>
+          <div class="skill-list">
+            <span class="skill-item">Сдал ЕГЭ (83 балла позор)</span>
+            <span class="skill-item">знаю ЛУЧШЕ чем С++</span>
+            <span class="skill-item">умею выводить hello world</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">java</div>
+          <div class="skill-list">
+            <span class="skill-item">Ничего не умею</span>
+            <span class="skill-item">Абсолютно</span>
+            <span class="skill-item">Написал сюда для</span>
+            <span class="skill-item">Красивой картинки</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Просто умею</div>
+          <div class="skill-list">
+            <span class="skill-item">Плавать (10 лет спорта)</span>
+            <span class="skill-item">Знаю все столицы</span>
+            <span class="skill-item">Радоваться жизни</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- НЕСТАНДАРТНЫЙ ЭЛЕМЕНТ: интерактивный терминал -->
+    <div class="easter-section fade-up">
+      <div class="section-header">
+        <span class="section-num">✦</span>
+        <span class="section-title">Нестандартный элемент</span>
+        <div class="section-line"></div>
+      </div>
+      <button class="easter-btn" onclick="toggleTerminal()">
+        <span id="terminal-btn-text">$ Запустить меня</span>
+      </button>
+      <div class="terminal" id="terminal">
+        <div class="terminal-bar">
+          <div class="tbar-dot" style="background:#ff5f57"></div>
+          <div class="tbar-dot" style="background:#febc2e"></div>
+          <div class="tbar-dot" style="background:#28c840"></div>
+          <span style="margin-left:8px; font-size:12px; color:#666; font-family:monospace">bash — 80×24</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="prompt">$ whoami</div>
+          <div class="output" id="t-output"></div>
+          <span class="cursor" id="t-cursor"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer fade-up">
+      Сделано с <span>♥</span> и кофе · 2026
+    </div>
+
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
 </html>
